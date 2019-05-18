@@ -13,14 +13,16 @@ public class Application {
 
     public static void main(String[] args) {
 
-        BillingService billingService = new CreditCardBillingService();
+        PaypalCreditCardProcessor processor = new PaypalCreditCardProcessor();
+        DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
+        BillingService billingService = new CreditCardBillingService(processor, transactionLog);
+        CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
 
         Order order = new Order();
         OrderItem hotDog = new OrderItem("Hot dog", new BigDecimal("3.59"));
         OrderItem coffee = new OrderItem("Coffee", new BigDecimal("4.99"));
         order.addItem(hotDog);
         order.addItem(coffee);
-        CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
 
         Receipt receipt = billingService.chargeOrder(order, creditCard);
 

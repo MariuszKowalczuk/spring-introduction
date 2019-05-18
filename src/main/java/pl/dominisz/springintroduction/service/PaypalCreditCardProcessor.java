@@ -16,12 +16,12 @@ public class PaypalCreditCardProcessor implements CreditCardProcessor {
     public ChargeResult charge(CreditCard creditCard, BigDecimal amount) {
         int number = random.nextInt(3);
         if (number == 0) {
-            System.out.println("I'm charging card" + creditCard.getNumber() + " for " + amount);
+            System.out.println("I'm charging card " + creditCard.getNumber() + " for " + amount);
             return new ChargeResult("Successful charge!", true);
 
         }
         else if (number == 1){
-            System.out.println("Charging card" + creditCard.getNumber() + " failed");
+            System.out.println("Charging card " + creditCard.getNumber() + " failed");
             return new ChargeResult("Limits exceeded", false);
 
         }
