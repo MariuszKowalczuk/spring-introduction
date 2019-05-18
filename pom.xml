@@ -17,6 +17,7 @@
         <junit.jupiter.version>5.4.1</junit.jupiter.version>
         <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>2.22.1</maven.surefire.plugin.version>
+        <spring.context.version>5.1.7.RELEASE</spring.context.version>
 
     </properties>
 
@@ -39,6 +40,11 @@
             <artifactId>mockito-all</artifactId>
             <version>1.10.19</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId> spring-context</artifactId>
+            <version>${spring.context.version}</version>
         </dependency>
 
     </dependencies>

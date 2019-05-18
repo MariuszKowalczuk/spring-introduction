@@ -1,5 +1,6 @@
 package pl.dominisz.springintroduction.service;
 
+import org.springframework.stereotype.Component;
 import pl.dominisz.springintroduction.model.CreditCard;
 import pl.dominisz.springintroduction.model.Order;
 import pl.dominisz.springintroduction.model.Receipt;

@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class CreditCardBillingServiceTest {
     @Test
-    public void shouldSuccefullyChargeCard(){
+    public void shouldSuccefullyChargeCard() {
         CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
         Order order = new Order();
         OrderItem hotDog = new OrderItem("Hot dog", new BigDecimal("3.59"));
@@ -35,7 +35,7 @@ class CreditCardBillingServiceTest {
     }
 
     @Test
-    public void shouldDeclinedCharge(){
+    public void shouldDeclinedCharge() {
         CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
         Order order = new Order();
         OrderItem hotDog = new OrderItem("Hot dog", new BigDecimal("3.59"));
@@ -51,12 +51,12 @@ class CreditCardBillingServiceTest {
 
         Assertions.assertFalse(receipt.isSuccessful());
         Assertions.assertEquals("unsuccesful", receipt.getMessage());
-        Mockito.verify(transactionLog);
+
 
     }
 
     @Test
-    public void shouldFailureCharge(){
+    public void shouldFailureCharge() {
         CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
         Order order = new Order();
         OrderItem hotDog = new OrderItem("Hot dog", new BigDecimal("3.59"));
@@ -74,7 +74,6 @@ class CreditCardBillingServiceTest {
         Assertions.assertEquals("connection lost", receipt.getMessage());
 
     }
-
 
 
 }
