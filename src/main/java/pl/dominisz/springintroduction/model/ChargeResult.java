@@ -16,7 +16,7 @@ public class ChargeResult {
         return successful;
     }
 
-    public Object getDeclineMessage() {
+    public String getDeclineMessage() {
         return message;
     }
 }
