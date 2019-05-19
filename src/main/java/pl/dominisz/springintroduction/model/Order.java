@@ -1,6 +1,8 @@
 package pl.dominisz.springintroduction.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -10,9 +12,13 @@ import java.util.List;
  * @author Mariusz Kowalczuk
  */
 @Getter
+@Setter
+@AllArgsConstructor
 public class Order {
 
     private List<OrderItem> items;
+    private long id;
+    private long userId;
 
     public Order() {
         items = new ArrayList<>();
