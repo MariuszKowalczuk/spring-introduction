@@ -7,6 +7,8 @@ import pl.dominisz.springintroduction.model.Order;
 import pl.dominisz.springintroduction.repository.OrderRepository;
 import pl.dominisz.springintroduction.repository.UserRepository;
 
+import java.util.List;
+
 /**
  * @author Mariusz Kowalczuk
  */
@@ -32,5 +34,10 @@ public class OrderServiceImpl implements OrderService {
         order.setUserId(userId);
 
         return orderRepository.save(order);
+    }
+
+    @Override
+    public List<Order> findAll() {
+       return orderRepository.findAll();
     }
 }

@@ -1,3 +1,115 @@
+GET http://localhost:8080/users
+Content-Type: application/json
+
+<> 2019-05-19T040125.200.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Andrzej",
+  "email": "pieter@gmail.com",
+  "creditCard": {
+    "firstName": "Andrzej",
+    "lastName": "Slodowy",
+    "number": "1234567890",
+    "expireDate": "2022-04-01"
+  }
+}
+
+<> 2019-05-19T040059.200.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Piotr",
+  "email": "pieter@gmail.com",
+  "creditCard": {
+    "firstName": "Piotr",
+    "lastName": "Slodowy",
+    "number": "1234567890",
+    "expiryDate": "2022-04-01"
+  }
+}
+
+<> 2019-05-19T040029.200.json
+
+###
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Adam",
+  "email": "adam@gmail.com",
+  "creditCard": {
+    "firstName": "Adam",
+    "lastName": "Slodowy",
+    "number": "1234567890",
+    "expiryDate": "2022-04-01"
+  }
+}
+
+<> 2019-05-19T040012.200.json
+
+###
+
+POST http://localhost:8080/users/1/orders
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Piotr",
+  "email": "ffd@gmail.com"}
+
+<> 2019-05-19T035510.200.json
+
+###
+
+POST http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Piotr",
+  "email": "ffd@gmail.com"}
+
+<> 2019-05-19T035434.200.json
+
+###
+
+POST http://localhost:8080/users/1/orders/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2019-05-19T035409.400.json
+
+###
+
+POST http://localhost:8080/users/1/orders
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2019-05-19T035343.400.json
+
+###
+
+POST http://localhost:8080/users/1/orders
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2019-05-19T035314.400.json
+
+###
+
 POST http://localhost:8080/users/1/orders
 Accept: */*
 Cache-Control: no-cache

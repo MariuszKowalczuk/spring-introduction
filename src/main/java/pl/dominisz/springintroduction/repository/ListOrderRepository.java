@@ -25,4 +25,9 @@ public class ListOrderRepository implements OrderRepository {
 
 
     }
+
+    @Override
+    public List<Order> findAll() {
+        return orders;
+    }
 }

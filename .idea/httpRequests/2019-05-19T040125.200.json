@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Adam",
+    "email": "adam@gmail.com",
+    "creditCard": {
+      "firstName": "Adam",
+      "lastName": "Slodowy",
+      "number": "1234567890",
+      "expireDate": null
+    }
+  },
+  {
+    "id": 2,
+    "name": "Piotr",
+    "email": "pieter@gmail.com",
+    "creditCard": {
+      "firstName": "Piotr",
+      "lastName": "Slodowy",
+      "number": "1234567890",
+      "expireDate": null
+    }
+  },
+  {
+    "id": 3,
+    "name": "Andrzej",
+    "email": "pieter@gmail.com",
+    "creditCard": {
+      "firstName": "Andrzej",
+      "lastName": "Slodowy",
+      "number": "1234567890",
+      "expireDate": "2022-04-01"
+    }
+  }
+]

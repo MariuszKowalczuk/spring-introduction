@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import pl.dominisz.springintroduction.model.Order;
 import pl.dominisz.springintroduction.service.OrderService;
 
+import java.util.List;
+
 /**
  * @author Mariusz Kowalczuk
  */
@@ -23,4 +25,11 @@ public class OrderController {
     public Order create(@PathVariable long userId, @RequestBody Order order) {
         return orderService.create(userId, order);
     }
+
+    @GetMapping
+    public List<Order> findAll(){
+        return orderService.findAll();
+
+    }
+
 }
