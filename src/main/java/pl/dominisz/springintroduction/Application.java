@@ -1,5 +1,7 @@
 package pl.dominisz.springintroduction;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,26 +14,12 @@ import pl.dominisz.springintroduction.service.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-@ComponentScan
+
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
-        Order order = new Order();
-        OrderItem hotDog = new OrderItem("Hot dog", new BigDecimal("3.59"));
-        OrderItem coffee = new OrderItem("Coffee", new BigDecimal("4.99"));
-        order.addItem(hotDog);
-        order.addItem(coffee);
-        CreditCard creditCard = new CreditCard("Jan", "Kowalski", "123", LocalDate.of(2022, 5, 1));
+        SpringApplication.run(Application.class, args);
 
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext(Application.class);
-
-        CreditCardBillingService billingService = context.getBean(CreditCardBillingService.class);
-
-
-        Receipt receipt = billingService.chargeOrder(order, creditCard);
-
-        System.out.println(receipt);
     }
-
 }
